@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Challenge 5</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="substitution.js" defer></script>
+</head>
+<body>
+  <h1>Welcome to Challenge 5</h1>
+  <p>To solve this you just need to replace one letter for another, guessing based on frequency</p>
+  <p>Encoded Message: Qeb cixd zxk lcqbk yb exoa ql cfka fk x prypqfqrqflk zfmebo yrq fq grpq qxhbp [mXqf3Kz3]</p>
+
+  <form>
+    <input class="challenge-in" type="text" id="cipher" placeholder="[Decoded Text]" required>
+    <button type="button" onclick="validateAndRedirect()">Submit</button>
+  </form>
+
+  <div id="container"></div>
+
+  <button id="chal-5">Test</button>
+
+  <div id="string">Qeb cixd zxk lcqbk yb exoa ql cfka fk x prypqfqrqflk zfmebo yrq fq grpq qxhbp [mXqf3Kz3]</div>
+
+  <script>
+    function validateAndRedirect() {
+      const input = document.getElementById("cipher").value;
+      if (input === "[pAti3Nc3]") {
+        document.body.style.backgroundColor = "lightgreen"
+        setTimeout(() => {
+        window.location.href = "/challenge6.html";
+      }, 1000);
+      } else {
+          document.body.style.backgroundColor = "rgb(255, 80, 80)";
+          setTimeout(() => {
+            document.body.style.backgroundColor = "";
+        }, 500);
+      }
+    }
+
+
+
+  </script>
+</body>
+</html>

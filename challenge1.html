@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Challenge 1</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Welcome to Challenge 1</h1>
+  <p>To decode this encoding all you need to do is rotate the letters of the alphabet till you get your flag</p>
+  <p>Encoded Message: [nL3dlC_rs67]</p>
+
+  <form>
+    <input class="challenge-in" type="text" id="cipher" placeholder="[Decoded Text]" required>
+    <button type="button" onclick="validateAndRedirect()">Submit</button>
+  </form>
+
+  <script>
+    function validateAndRedirect() {
+      const input = document.getElementById("cipher").value;
+      if (input === "[cA3saR_gh67]") {
+        document.body.style.backgroundColor = "lightgreen"
+        setTimeout(() => {
+        window.location.href = "/challenge2.html";
+      }, 1000);
+      } else {
+          document.body.style.backgroundColor = "rgb(255, 80, 80)";
+          setTimeout(() => {
+            document.body.style.backgroundColor = "";
+        }, 500);
+      }
+    }
+  </script>
+</body>
+</html>

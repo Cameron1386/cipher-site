@@ -1,0 +1,40 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    height: 80vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.challenge-in {
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    color: rgb(255, 80, 80);
+    border: 0px;
+    background-color: lightgray;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+button {
+    font-family: 'Courier New', Courier, monospace;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 5px;
+    padding: 10px;
+    border: 0px;
+}
+
+#container {
+    display: grid;
+    grid-template-columns: repeat(26, 40px);
+    margin-top: 20px;
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Challenge 2</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Welcome to Challenge 2</h1>
+  <p>Hex translates everything to its hex number equivalent in ASCII</p>
+  <p>Encoded Message: 5b 62 41 73 33 5f 31 36 5d</p>
+
+  <form>
+    <input class="challenge-in" type="text" id="cipher" placeholder="[Decoded Text]" required>
+    <button type="button" onclick="validateAndRedirect()">Submit</button>
+  </form>
+
+  <script>
+    function validateAndRedirect() {
+      const input = document.getElementById("cipher").value;
+      if (input === "[bAs3_16]") {
+        document.body.style.backgroundColor = "lightgreen"
+        setTimeout(() => {
+        window.location.href = "/challenge3.html";
+      }, 1000);
+      } else {
+          document.body.style.backgroundColor = "rgb(255, 80, 80)";
+          setTimeout(() => {
+            document.body.style.backgroundColor = "";
+        }, 500);
+      }
+    }
+  </script>
+</body>
+</html>

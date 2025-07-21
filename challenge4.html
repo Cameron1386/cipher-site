@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Challenge 4</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Welcome to Challenge 4</h1>
+  <p>This is a more advanced Ceaser Cipher where the rotations are based on a -->'Key'<--</p>
+  <p>Encoded Message: [u3Cq_kV3_3T3BcuR3vc]</p>
+
+  <form>
+    <input class="challenge-in" type="text" id="cipher" placeholder="[Decoded Text]" required>
+    <button type="button" onclick="validateAndRedirect()">Submit</button>
+  </form>
+
+  <script>
+    function validateAndRedirect() {
+      const input = document.getElementById("cipher").value;
+      if (input === "[k3Ys_aR3_3V3RywH3re]") {
+        document.body.style.backgroundColor = "lightgreen"
+        setTimeout(() => {
+        window.location.href = "/challenge5.html";
+      }, 1000);
+      } else {
+          document.body.style.backgroundColor = "rgb(255, 80, 80)";
+          setTimeout(() => {
+            document.body.style.backgroundColor = "";
+        }, 500);
+      }
+    }
+  </script>
+</body>
+</html>

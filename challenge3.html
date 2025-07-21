@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Challenge 3</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Welcome to Challenge 3</h1>
+  <p>Base64 is known for its equal signs at the end of a message and can be easily decoded using a decoder</p>
+  <p>Encoded Message: W3VTM2RfZjByXzNtQWlMc10=</p>
+
+  <form>
+    <input class="challenge-in" type="text" id="cipher" placeholder="[Decoded Text]" required>
+    <button type="button" onclick="validateAndRedirect()">Submit</button>
+  </form>
+
+  <script>
+    function validateAndRedirect() {
+      const input = document.getElementById("cipher").value;
+      if (input === "[uS3d_f0r_3mAiLs]") {
+        document.body.style.backgroundColor = "lightgreen"
+        setTimeout(() => {
+        window.location.href = "/challenge4.html";
+      }, 1000);
+      } else {
+          document.body.style.backgroundColor = "rgb(255, 80, 80)";
+          setTimeout(() => {
+            document.body.style.backgroundColor = "";
+        }, 500);
+      }
+    }
+  </script>
+</body>
+</html>
