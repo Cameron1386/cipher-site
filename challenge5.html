@@ -24,12 +24,25 @@
   <div id="string">Qeb cixd zxk lcqbk yb exoa ql cfka fk x prypqfqrqflk zfmebo yrq fq grpq qxhbp [mXqf3Kz3]</div>
 
   <script>
+  const urlParams = new URLSearchParams(window.location.search);
+  const passedToken = urlParams.get('token');
+  const storedToken = sessionStorage.getItem('challenge4Token');
+
+  if ((passedToken !== storedToken) || passedToken == null) {
+    alert("BAD!!");
+    window.location.href = 'challenge1.html';
+  }
+
     function validateAndRedirect() {
       const input = document.getElementById("cipher").value;
-      if (input === "[pAti3Nc3]") {
+
+      const token = Math.random().toString(36).slice(2);  // random token
+      sessionStorage.setItem('challenge5Token', token);
+
+      if (input === atob("W3BBdGkzTmMzXQ==")) {
         document.body.style.backgroundColor = "lightgreen"
         setTimeout(() => {
-        window.location.href = "/end.html";
+        window.location.href = `end.html?token=${token}`;
       }, 1000);
       } else {
           document.body.style.backgroundColor = "rgb(255, 80, 80)";

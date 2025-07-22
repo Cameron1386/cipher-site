@@ -9,4 +9,14 @@
 <body>
     <h1>You Finished!!</h1>
 </body>
+<script>
+    const urlParams = new URLSearchParams(window.location.search);
+  const passedToken = urlParams.get('token');
+  const storedToken = sessionStorage.getItem('challenge5Token');
+
+  if ((passedToken !== storedToken) || passedToken == null) {
+    alert("BAD!!");
+    window.location.href = 'challenge1.html';
+  }
+</script>
 </html>

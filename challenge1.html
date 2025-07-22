@@ -17,12 +17,17 @@
   </form>
 
   <script>
+    
     function validateAndRedirect() {
       const input = document.getElementById("cipher").value;
-      if (input === "[cA3saR_gh67]") {
+      if (input === atob("W2NBM3NhUl9naDY3XQ==")) {
+
+        const token = Math.random().toString(36).slice(2);  // random token
+        sessionStorage.setItem('challenge1Token', token);
+
         document.body.style.backgroundColor = "lightgreen"
         setTimeout(() => {
-        window.location.href = "/challenge2.html";
+        window.location.href = `challenge2.html?token=${token}`;
       }, 1000);
       } else {
           document.body.style.backgroundColor = "rgb(255, 80, 80)";

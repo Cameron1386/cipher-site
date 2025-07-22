@@ -17,12 +17,27 @@
   </form>
 
   <script>
+
+  const urlParams = new URLSearchParams(window.location.search);
+  const passedToken = urlParams.get('token');
+  const storedToken = sessionStorage.getItem('challenge3Token');
+
+  if ((passedToken !== storedToken) || passedToken == null) {
+    alert("BAD!!");
+    window.location.href = 'challenge1.html';
+  }
+
+
     function validateAndRedirect() {
       const input = document.getElementById("cipher").value;
-      if (input === "[k3Ys_aR3_3V3RywH3re]") {
+      if (input === atob("W2szWXNfYVIzXzNWM1J5d0gzcmVd")) {
+
+        const token = Math.random().toString(36).slice(2);  // random token
+        sessionStorage.setItem('challenge4Token', token);
+
         document.body.style.backgroundColor = "lightgreen"
         setTimeout(() => {
-        window.location.href = "/challenge5.html";
+        window.location.href = `challenge5.html?token=${token}`;
       }, 1000);
       } else {
           document.body.style.backgroundColor = "rgb(255, 80, 80)";
