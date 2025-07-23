@@ -33,8 +33,17 @@ button {
     border: 0px;
 }
 
+#chal-5 {
+    margin: 20px;
+}
+
 #container {
     display: grid;
     grid-template-columns: repeat(26, 40px);
     margin-top: 20px;
+}
+
+#string {
+    margin-left: 20vw;
+    margin-right: 20vw;
 }

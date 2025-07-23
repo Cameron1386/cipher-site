@@ -32,7 +32,7 @@ document.getElementById("chal-5").addEventListener('click', () => {
 
     const inputs = document.querySelectorAll("#container input");
     const stringCon = document.getElementById("string");
-    const string = "Qeb cixd zxk lcqbk yb exoa ql cfka fk x prypqfqrqflk zfmebo yrq fq grpq qxhbp [mXqf3Kz3]"
+    const string = "Qeb cixd zxk lcqbk yb exoa ql cfka fk x prypqfqrqflk zfmebo, yrq fq grpq qxhbp [mXqf3Kz3]. Fc vlr illh zilpbiv xq qeb mxqqbokp xka cobnrbkzfbp lc qeb ibqqbop, vlr'ii pqxoq ql pbb efkqp. Pljb ibqqbop xmmbxo jlob lcqbk qexk lqebop, xka zboqxfk zljyfkxqflkp tfii pqxka lrq. Pqxv clzrpba, qxhb vlro qfjb, xka bsbkqrxiiv, qeb jbppxdb tfii obsbxi fqpbic."
     let temp = ""
 
     let result = '';
